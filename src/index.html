@@ -1,1 +1,55 @@
-tdd-starter
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <title>Newsflash</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Newsflash</h1>
+        <p id="subtitle">Find information on your city!</p>
+      </div>
+    </div>
+    <div class="container">
+      <form id="city-input">
+        <div class="form-group">
+          <label for="city-name"><span id="input-text">Enter your city:</span></label>
+          <input type="text" class="form-control" id="city-name"><br>
+          <button type="submit" class="btn btn-outline-secondary" name="button">Submit</button>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-6" class="card">
+          <div class="card-header">City Map</div>
+          <div class="card-body citymap">
+          </div>
+        </div>
+        <div class="col-md-6" class="card">
+          <div class="card-header">Weather</div>
+          <div class="card-body cityweather"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6" class="card">
+          <div class="card-header">News</div>
+          <div class="card-body citynews"></div>
+        </div>
+        <div class="col-md-6" class="card">
+          <div class="card-header">Restaurants</div>
+          <div class="card-body citybusiness" id="restaurants"></div>
+        </div>
+        <div class="col-md-6" class="card">
+          <div class="card-header">Cafes</div>
+          <div class="card-body citybusiness" id="cafes"></div>
+        </div>
+        <div class="col-md-6" class="card">
+          <div class="card-header">Bars</div>
+          <div class="card-body citybusiness" id="bars"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
