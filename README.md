@@ -29,19 +29,19 @@ _contact: zakrogh@gmail.com_
 
 ## Work Distribution
 * _Zach:_
- * _Geo Locator API_
- * _Bing News API_
- * _Windy Maps API_
- * _Here Maps API_
+  * _Geo Locator API_
+  * _Bing News API_
+  * _Windy Maps API_
+  * _Here Maps API_
 * _Misaki:_
   * _Yelp API_
   * _Pixabay API_
 * _Vera:_
- * _Repository/Prj Manager_
+  * _Repository/Prj Manager_
   * _Testing (Jasmine/Karma)_
 * _Jordan:_
- * _HTML_
- * _CSS_
+  * _HTML_
+  * _CSS_
 ## Technologies Used
 
 _HTML, CSS with Bootstrap, JavaScript with JQuery_
