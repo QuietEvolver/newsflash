@@ -6,7 +6,9 @@ import './styles.css';
 import { BusinessSearch } from './yelp-api';
 import { getNewsApi } from './news-api';
 import { WeatherService } from './weather-service';
+import { getImageApi } from './image-api';
 import { getCoordinates } from './geo-coordinates';
+import { getWeatherMapApi } from './weather-map-api';
 
 const gatherWeather = function(city, lat, lon){
   let weatherService = new WeatherService();  // create instance of WeatherService class
@@ -21,6 +23,10 @@ const gatherWeather = function(city, lat, lon){
     $('.cityweather').text(`There was an error processing your request: ${error.message}`);
   });
   return weatherinfo;
+}
+const getImage = async function(city) {
+  let cityImage = await getImageApi(city);
+  return cityImage;
 }
 const displayNews = function(newsData){
   if(!newsData.value){
@@ -51,11 +57,18 @@ const displayMap = function(coords){
       center: { lat: maplat, lng: maplon}
   });
 }
+// Render the first image url of the data
+const displayImage = function(cityImage) {
+  const imageUrl = cityImage.hits[0].largeImageURL;
+  $('.city-image').css("background", `url(${imageUrl}) no-repeat center center fixed`);
+}
+
 $(document).ready(function(){
   $("#city-input").submit(async function(event){
     event.preventDefault();
     $(".card-body").text("");
     $(".citymap").append('<div id="map"></div>');
+    $(".cityweather").append('<div id="windy"></div>');
     let city = $("#city-name").val();
     let coords = await getCoordinates(city);
     const restaurantSearch = new BusinessSearch(city, "restaurants");
@@ -68,5 +81,8 @@ $(document).ready(function(){
     displayNews(newsData);
     let weatherBody = await gatherWeather(city, coords.results[0].geometry.lat, coords.results[0].geometry.lng);
     displayMap(weatherBody.coord);
+    let wmap = getWeatherMapApi(weatherBody.coord);
+    let cityImage = await getImage(city);
+    displayImage(cityImage);
   });
 });

@@ -27,10 +27,32 @@ _This website is designed to practice calling api's. When a user inputs the name
 
 _contact: zakrogh@gmail.com_
 
+## Work Distribution
+* _Zach:_
+  * _Geo Locator API_
+  * _Bing News API_
+  * _Windy Maps API_
+  * _Here Maps API_
+* _Misaki:_
+  * _Yelp API_
+  * _Pixabay API_
+* _Vera:_
+  * _Repository/Prj Manager_
+  * _Testing (Jasmine/Karma)_
+* _Jordan:_
+  * _HTML_
+  * _CSS_
 ## Technologies Used
 
 _HTML, CSS with Bootstrap, JavaScript with JQuery_
-
+_API's used:_
+* _geolocator: https://opencagedata.com/_
+* _bing news:  https://azure.microsoft.com/en-us/services/cognitive-services/bing-news-search-api/_
+* _windy map: https://api4.windy.com/_
+* _here maps: https://developer.here.com/_
+* _yelp: https://www.yelp.com/fusion_
+* _pixabay: https://pixabay.com/_
+* _open weather: https://openweathermap.org/_
 ### License
 
 *MIT License*

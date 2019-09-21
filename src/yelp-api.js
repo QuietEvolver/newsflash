@@ -9,7 +9,7 @@ export class BusinessSearch {
   callBusinessInfo() {
     const url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${this.location}&term=${this.term}`;
     let promise = new Promise(function(resolve, reject) {
-      const  request = new XMLHttpRequest();
+      const request = new XMLHttpRequest();
       request.onload = function() {
         if(this.status === 200) {
           resolve(request.response);
@@ -23,7 +23,7 @@ export class BusinessSearch {
     });
     // Variable to point out BusinessSearch class
     let self = this;
-    promise.then(function(response) {
+    return promise.then(function(response) {
       let body = JSON.parse(response);
       const totalResults = body.businesses;
         // If our results are greater than 0, continue
@@ -32,7 +32,7 @@ export class BusinessSearch {
         } else {
           $('#business-info').append('<h5>We discovered no results!</h5>');
         }
-      return body.response;
+      return body.businesses;
     }, function(error) {
       console.log(error);
     });
