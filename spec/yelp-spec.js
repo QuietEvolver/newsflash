@@ -14,5 +14,5 @@ describe ("Business API", () => {
       "content/type": "text.html",
       responseText: "<p>Something</p>"
     });
-  }
+  }  
 });

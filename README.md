@@ -39,6 +39,7 @@ _contact: zakrogh@gmail.com_
 * _Vera:_
   * _Repository/Prj Manager_
   * _Testing (Jasmine/Karma)_
+  *_Open Weather API_
 * _Jordan:_
   * _HTML_
   * _CSS_
